@@ -1,4 +1,4 @@
-require('../dist/powerup.js');
+require('../dist/powerup.js')
 
 describe('object.json()', () =>
 {

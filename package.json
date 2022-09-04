@@ -1,9 +1,9 @@
 {
   "name": "powerup",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Collection of basic extensions and libraries for frequently",
-  "keywords": [],
-  "author": "",
+  "keywords": [ "powerup", "extensions", "libraries", "utility", "helper", "collection" ],
+  "author": "Richard Antal Nagy",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^29.0.0",

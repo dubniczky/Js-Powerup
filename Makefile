@@ -3,18 +3,27 @@ output := dist/powerup.js
 
 ## Commands
 
+# Create a production bundle
 .PHONY: bundle
 bundle: node_modules
-	npx webpack bundle
+	npx webpack bundle --mode production
 
+# Start an auto build development bundler
+.PHONY: dev
+dev: node_modules
+	npx webpack bundle --mode development --watch
+
+# Run jest tests
 .PHONY: test
 test: $(output)
 	npx jest
 
+# Clean dist folder
 .PHONY: clean
 clean:
-	rm -rf dist
+	rm -rf dist/**
 
+# Install node modules
 .PHONY: install
 install:
 	pnpm install

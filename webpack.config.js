@@ -4,5 +4,4 @@ module.exports = {
         path: __dirname + '/dist',
         filename: 'powerup.js',
     },
-    mode: 'production',
 }

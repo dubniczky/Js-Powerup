@@ -43,3 +43,10 @@ describe('array.distinct()', () =>
         expect([1,2,3,2].distinct()).toStrictEqual([1,2,3])
     })
 })
+
+describe('array.clean()', () =>
+{
+    test('correct', () => {
+        expect([1,undefined,2,null,3,false].clean()).toStrictEqual([1,2,3])
+    })
+})

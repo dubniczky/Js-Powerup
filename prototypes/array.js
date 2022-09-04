@@ -38,6 +38,13 @@ Array.prototype.sum = function() {
 /**
  * Product of the values in the array
  */
- Array.prototype.prod = function() {
+Array.prototype.prod = function() {
     return this.reduce((a,b) => a * b, 1)
+}
+
+/**
+ * Return an array with falsey values removed
+ */
+Array.prototype.clean = function() {
+    return this.filter((a) => !!a)
 }

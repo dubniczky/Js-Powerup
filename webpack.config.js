@@ -1,3 +1,8 @@
 module.exports = {
-    entry: './main.js'
+    entry: './main.js',
+    output: {
+        path: __dirname + '/dist',
+        filename: 'powerup.js',
+    },
+    mode: 'production',
 }

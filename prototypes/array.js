@@ -28,3 +28,16 @@ Array.prototype.distinct = function() {
     return [...new Set(this)]
 }
 
+/**
+ * Sum values in the array
+ */
+Array.prototype.sum = function() {
+    return this.reduce((a,b) => a + b, 0)
+}
+
+/**
+ * Product of the values in the array
+ */
+ Array.prototype.prod = function() {
+    return this.reduce((a,b) => a * b, 1)
+}

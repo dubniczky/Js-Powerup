@@ -1,12 +1,15 @@
 output := dist/powerup.js
 
-bundle::
+.PHONY: bundle
+bundle:
 	npx webpack bundle
 
-test:: $(output)
+.PHONY: test
+test: $(output)
 	npx jest
 
-clean::
+.PHONY: clean
+clean:
 	rm -rf dist
 
 

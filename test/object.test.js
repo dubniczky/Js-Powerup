@@ -1,6 +1,6 @@
 require('../dist/powerup.js')
 
-describe('object.json()', () =>
+describe('Object.json()', () =>
 {
     test('list', () => {
         expect([1, 2, 3].json()).toBe('[1,2,3]')
@@ -13,7 +13,7 @@ describe('object.json()', () =>
     })
 })
 
-describe('object.deepCopy()', () =>
+describe('Object.deepCopy()', () =>
 {
     test('different object with same values', () => {
         const a = { foo: 'bar' }

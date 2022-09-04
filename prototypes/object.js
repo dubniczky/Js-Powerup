@@ -7,3 +7,6 @@ Object.prototype.json = function(spaces = null) {
     return JSON.stringify(this, null, spaces)
 }
 
+Object.prototype.deepCopy = function() {
+    return JSON.parse(this.json())
+}

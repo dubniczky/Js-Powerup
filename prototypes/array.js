@@ -48,3 +48,10 @@ Array.prototype.prod = function() {
 Array.prototype.clean = function() {
     return this.filter((a) => !!a)
 }
+
+/**
+ * Remove an item or multiple items from the array
+ */
+Array.prototype.remove = function(...items) {
+    return this.filter((a) => !items.includes(a))
+}

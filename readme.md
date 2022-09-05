@@ -1,10 +1,10 @@
 # PowerUP
 
-Extension library for JavaScript prototypes with commonly used features
+Zero dependency extension library for JavaScript prototypes with commonly used features
 
 ## Description
 
-PowerUP extends Javascript's capabilities by expanding the built-in prototypes of objects. After importing, these functions and properties can be used just as if they were native ones for rapid development.
+PowerUP supercharges Javascript's capabilities by expanding the built-in prototypes. After importing, these functions and properties can be used just as if they were native ones for rapid development.
 
 ## Installation
 

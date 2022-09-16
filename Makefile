@@ -28,6 +28,11 @@ clean:
 install:
 	pnpm install
 
+# Save current node version to .nvmrc
+.PHONY: nvmrc
+nvmrc:
+	node -v > .nvmrc
+
 
 ## Dynamic dependencies
 

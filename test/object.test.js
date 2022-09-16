@@ -36,3 +36,18 @@ describe('Object.deepCopy()', () =>
         expect(a).toStrictEqual(b)
     })
 })
+
+describe('Object.toQueryString()', () =>
+{
+    test('empty object', () => {
+        expect({}.toQueryString()).toBe('')
+    })
+
+    test('different object', () => {
+        expect({a:1,b:true}.toQueryString()).toBe('a=1&b=true')
+    })
+
+    test('different json', () => {
+        expect({a:[1,2,3]}.toQueryString(true)).toBe('a=[1,2,3]')
+    })
+})

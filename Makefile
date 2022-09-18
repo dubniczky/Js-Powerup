@@ -1,4 +1,6 @@
-output := dist/powerup.js
+dist := dist
+output := powerup.js
+output_min := powerup.min.js
 
 
 ## Commands
@@ -6,7 +8,7 @@ output := dist/powerup.js
 # Create a production bundle
 .PHONY: bundle
 bundle: node_modules
-	npx webpack bundle --mode production
+	npx webpack bundle --mode production --env=minimize
 
 # Create a development bundle
 .PHONY: bundle-dev
@@ -16,8 +18,8 @@ bundle-dev: node_modules
 # Create a release bundle
 .PHONY: release
 release: node_modules
-	npx webpack bundle --mode development --output-filename powerup.js
-	npx webpack bundle --mode production --output-filename powerup.min.js
+	npx webpack bundle --mode production --output-filename $(output)
+	npx webpack bundle --mode production --env=minimize --output-filename $(output_min)
 
 # Start an auto build development bundler
 .PHONY: dev
@@ -26,7 +28,7 @@ dev: node_modules
 
 # Run jest tests
 .PHONY: test
-test: $(output)
+test: $(dist)/$(output)
 	npx jest
 
 # Clean dist folder
@@ -47,7 +49,7 @@ nvmrc:
 
 ## Dynamic dependencies
 
-$(output): main.js prototypes/*.js
+$(dist)/$(output): main.js prototypes/*.js
 	$(MAKE) -s bundle
 
 node_modules: package.json

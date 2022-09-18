@@ -7,7 +7,7 @@ module.exports = (env, argv) => {
             filename: argv['output-filename'] || 'powerup.js',
         },
         optimization: {
-            minimize: !dev,
+            minimize: !!env.minimize,
         }
     }
 }

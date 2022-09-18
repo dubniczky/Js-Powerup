@@ -23,3 +23,21 @@ describe('Number.floor()', () =>
         expect(a.floor()).toStrictEqual(-1)
     })
 })
+
+describe('Number.pow()', () =>
+{
+    test('no modulo', () => {
+        const a = 5
+        expect(a.pow(3)).toStrictEqual(125)
+    })
+
+    test('modulo', () => {
+        const a = 5
+        expect(a.pow(4, 256)).toStrictEqual(113)
+    })
+
+    test('negative modulo', () => {
+        const a = 5
+        expect(a.pow(4, -256)).toStrictEqual(113)
+    })
+})

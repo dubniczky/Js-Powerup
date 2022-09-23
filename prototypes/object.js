@@ -7,6 +7,10 @@ Object.prototype.json = function(spaces = null) {
     return JSON.stringify(this, null, spaces)
 }
 
+/**
+ * Create a new object with the same key and values.
+ * This uses json parser method, which is considered performant and also applies to inner objects.
+ */
 Object.prototype.deepCopy = function() {
     return JSON.parse(this.json())
 }

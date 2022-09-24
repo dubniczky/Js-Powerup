@@ -21,6 +21,8 @@ bun add powerup
 
 After the package is imported, it will update the built-in prototypes in the currently running instance. Because of this, the package does not need to be assigned or called directly.
 
+> It's important to load the module as soon as possible, but at least before loading any other module using it.
+
 CommonJS
 
 ```js
@@ -31,6 +33,12 @@ ES6
 
 ```js
 import 'powerup'
+```
+
+HTML
+
+```html
+<script src="powerup.js"></script>
 ```
 
 ## Usage

@@ -1,6 +1,6 @@
 dist := dist
 output := powerup.js
-output_min := powerup.min.js
+output_dev := powerup.dev.js
 
 
 ## Commands
@@ -18,8 +18,8 @@ bundle-dev: node_modules
 # Create a release bundle
 .PHONY: release
 release: node_modules
-	npx webpack bundle --mode production --output-filename $(output)
-	npx webpack bundle --mode production --env=minimize --output-filename $(output_min)
+	npx webpack bundle --mode production --output-filename $(output_dev)
+	npx webpack bundle --mode production --env=minimize --output-filename $(output)
 
 # Start an auto build development bundler
 .PHONY: dev
